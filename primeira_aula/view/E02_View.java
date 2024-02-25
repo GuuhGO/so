@@ -11,24 +11,15 @@ public class E02_View {
 		E02_Controller checkText = new E02_Controller();
 		int count;
 
-		System.out.print("Entre com o texto: ");
-		String in_text = scanner.next();
 		
-		count = checkText.count_parts(in_text, ";");
-		System.out.printf("O texto %s possui %d partes\n\n", in_text, count);
-		
-		System.out.print("Entre com o texto: ");
-		in_text = scanner.next();
-		
-		count = checkText.count_parts(in_text, ";");
-		System.out.printf("O texto %s possui %d partes\n\n", in_text, count);
-		
-		System.out.print("Entre com o texto: ");
-		in_text = scanner.next();
-		
+		for (int i = 0; i < 3; i++) {
+			System.out.print("Entre com o texto: ");
+			String in_text = scanner.next();
+			count = checkText.count_parts(in_text, ";");
+			System.out.printf("O texto possui %d partes\n\n", count);
+		}
 		scanner.close();
-		count = checkText.count_parts(in_text, ";");
-		System.out.printf("O texto %s possui %d partes\n\n", in_text, count);
+		
 	}
 
 }
