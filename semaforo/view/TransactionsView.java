@@ -39,7 +39,7 @@ public class TransactionsView {
 		int permissoes = 1;
 		Semaphore semaphore = new Semaphore(permissoes);
 		for (int id = 0; id < 21; id++) {
-			TransactionsController servCtrl = new TransactionsController(id, semaphore);
+			Thread servCtrl = new TransactionsController(id, semaphore);
 			servCtrl.start();
 		}
 	}
