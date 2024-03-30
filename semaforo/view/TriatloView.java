@@ -1,6 +1,5 @@
 package semaforo.view;
 
-import java.util.Stack;
 import java.util.concurrent.Semaphore;
 
 import semaforo.controller.TriatloC;
