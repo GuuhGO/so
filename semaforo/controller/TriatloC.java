@@ -21,7 +21,7 @@ public class TriatloC extends Thread {
 		super();
 		this.num = num + 1;
 		this.sem_tiroAoAlvo = semaforo;
-		this.atletas[num] = this;
+		atletas[num] = this;
 	}
 
 	@Override
