@@ -2,7 +2,6 @@ package semaforo.controller;
 
 import java.util.concurrent.Semaphore;
 
-@SuppressWarnings("unused")
 public class AviaoController extends Thread {
 	private int num;
 	private Semaphore semaforo;
