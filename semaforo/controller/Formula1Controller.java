@@ -59,17 +59,17 @@ public class Formula1Controller extends Thread {
 		System.out.println();
 		int pos = 1;
 		for (Formula1Controller atleta : all) {
-			System.out.printf("%02dº lugar - Corredor #%02d - %-30s: %.3fms\n", pos, atleta.num, atleta.escuderia, (double) atleta.tempo / 1000);
+			System.out.printf("%02dº lugar - Corredor #%02d - %-30s: %.3fs\n", pos, atleta.num, atleta.escuderia, (double) atleta.tempo / 1000);
 			pos += 1;
 		}
 	}
 
 	private void correr() {
 		System.out.printf("Carro #%02d da escuderia [%-30s] INCIOU a corrida\n", num, escuderia);
-		velocidade = (int) ((Math.random() * 18) + 66);
 		int contador = 0;
 		int timeWait = 10;
 		while (voltas < 3) {
+			velocidade = (int) ((Math.random() * 18) + 66);
 			distPercorrida += velocidade;
 			contador++;
 			if (contador % 10 == 0) {
